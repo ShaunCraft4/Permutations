@@ -1,7 +1,7 @@
 import random
 import math
 
-def FindALL(m):
+def FindALL(m): #Used to find all possible permutations with length of the character m
     m=str(m).lower()
     fl={}
     for i in m:
@@ -24,7 +24,7 @@ def FindALL(m):
             break
     return l
 
-def FindFrom0(m):
+def FindFrom0(m): #Used to find all possible permutations with lengths from 0 to the length of the string m
     m=str(m).lower()
     ML=[]
     i=0
@@ -48,6 +48,10 @@ def FindFrom0(m):
         i+=1
     ML.remove("")
     return ML
+
+m=input("Enter your string: ")
+print(FindALL(m)) 
+print(FindFrom0(m))
 
 
 
